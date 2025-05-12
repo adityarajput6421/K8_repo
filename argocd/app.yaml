@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/YOUR_USERNAME/video-app-k8s
+    repoURL: https://github.com/adityarajput6421/K8_repo
     targetRevision: HEAD
-    path: k8s
+    path: argocd
   destination:
     server: https://kubernetes.default.svc
     namespace: default

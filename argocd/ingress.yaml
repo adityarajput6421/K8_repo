@@ -6,14 +6,15 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
-  rules:
-  - host: argocd.adityarajput.site
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: argocd-server
-            port:
-              number: 80
+  ingressClassName: nginx
+    rules:
+    - host: argocd.adityarajput.site
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: argocd-server
+                port:
+                  number: 80

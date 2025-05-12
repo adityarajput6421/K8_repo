@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: video-server
-        image: aditya/video_Seerver:latest
+        image: htsingh200/video_server
         ports:
         - containerPort: 5000
         resources:

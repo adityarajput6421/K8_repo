@@ -9,17 +9,17 @@ metadata:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   ingressClassName: nginx
-    rules:
-      - host: video.aditya.dev
-        http:
-          paths:
-            - path: /
-              pathType: Prefix
-              backend:
-                service:
-                  name: video-server
-                  port:
-                    number: 80
+  rules:
+    - host: video.aditya.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: video-server
+                port:
+                  number: 80
   tls:
     - hosts:
         - video.aditya.dev

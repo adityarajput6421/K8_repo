@@ -16,10 +16,20 @@ spec:
     spec:
       containers:
       - name: video-server
-        image: htsingh200/video_server
+        image: htsingh200/video_server:v1.0
         ports:
         - containerPort: 5000
+        volumeMounts:
+            - name: video-storage
+              mountPath: /app/media
         resources:
           limits:
             memory: "256Mi"
             cpu: "500m"
+
+      volumes:
+        - name: video-storage
+          hostPath:
+            path: /mnt/media
+            type: Directory
+      
